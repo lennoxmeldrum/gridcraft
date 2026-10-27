@@ -51,6 +51,13 @@ impl SheetApp {
 
     /// Applies the font gates: a language Han-order change, startup/prepared fonts and workbook
     /// font binding. Every branch keeps its one-frame paint gate.
+    /// Something else replaced egui's fonts, styles and options since this app last drew (a host
+    /// showing another app in the same window): install GridCraft's again on the next pass.
+    pub fn reinstall_context(&mut self) {
+        self.fonts_ready = false;
+        self.fonts_set = false;
+    }
+
     pub(super) fn apply_font_state(&mut self, ctx: &egui::Context) {
         // A pending synthetic step owns the next real `ui` pass: `ui` returns at the font gate
         // before it handles input, so a font change requested now would consume the step without

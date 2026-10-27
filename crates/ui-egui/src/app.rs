@@ -70,6 +70,7 @@ impl SheetApp {
             ui_window: None,
             parked: HashMap::new(),
             native_windows: false,
+            mac_title_inset: true,
             arrange_windows: None,
             #[cfg(not(target_arch = "wasm32"))]
             updates_rt: Default::default(),

@@ -282,6 +282,9 @@ pub struct SheetApp {
     /// tests, embedding hosts) one window shows the active workbook window, and its close button
     /// quits.
     pub native_windows: bool,
+    /// macOS: start the title bar's controls after the window buttons (on by default). A host that
+    /// draws the window buttons elsewhere in its own window (WordCell's sidebar) turns it off.
+    pub mac_title_inset: bool,
     /// View › Arrange All's layout and windows, waiting for the native windows to move.
     pub arrange_windows: Option<(String, Vec<u64>)>,
     /// The update check, the startup prompt and a running self-update (desktop only).

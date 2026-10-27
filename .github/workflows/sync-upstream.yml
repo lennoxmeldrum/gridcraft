@@ -1,8 +1,8 @@
 # WordCell: keep this fork's main a mirror of storytold/gridcraft and merge it into wordcell daily
 # (see WORDCELL.md). A merge that conflicts with WordCell's patches opens one issue instead.
-# Needs the WORDCELL_BOT_TOKEN secret: a fine-grained token with Contents, Workflows, Issues and
-# Actions write on lennoxmeldrum/gridcraft and lennoxmeldrum/wordcell (GITHUB_TOKEN can't push commits
-# that touch .github/workflows, which upstream merges often do).
+# Needs the WORDCELL_BOT_TOKEN secret: a fine-grained token with Contents, Workflows and Issues
+# write on lennoxmeldrum/gridcraft and lennoxmeldrum/wordcell (GITHUB_TOKEN can't push commits that
+# touch .github/workflows, which upstream merges often do).
 name: Sync upstream
 on:
   schedule: [{ cron: "17 4 * * *" }]

@@ -9,6 +9,7 @@ own commit and is meant to be offered upstream; when upstream has it, drop it he
 |---|---|---|---|
 | G1 | `Session::document_mut(uid)`: a host marks any open workbook saved | WordCell host: Session::document_mut by uid | not yet opened |
 | G5 | `SheetApp::reinstall_context`: install GridCraft's fonts and theme again | WordCell host: SheetApp::reinstall_context | not yet opened |
+| G4 | `SheetApp::mac_title_inset`: a host can drop the room left for the macOS window buttons | WordCell host: optional macOS title-bar inset | not yet opened |
 
 GridCraft needs nothing else to be hosted: `Chrome` and `Services` already exist for hosts, and
 `SheetApp` without `DocWindows` draws one window. The plan these come from is

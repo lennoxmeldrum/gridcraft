@@ -15,5 +15,7 @@ GridCraft needs nothing else to be hosted: `Chrome` and `Services` already exist
 `SheetApp` without `DocWindows` draws one window. The plan these come from is
 `docs/implementation-plan.md` §6 in the WordCell repository.
 
-The upstream workflows in `.github/workflows/` don't run in this fork unless Actions is enabled in
-the fork's Actions tab. Leave them off: they need storytold's secrets and shared actions.
+Upstream's own workflows are disabled in this fork (Actions › each workflow › Disable): they need
+storytold's secrets and shared actions. Only `sync-upstream.yml` runs: daily, it mirrors upstream
+`main` and merges it into `wordcell` (or opens an issue if WordCell's patches conflict). It needs a
+`WORDCELL_BOT_TOKEN` secret; see that file's header.
